@@ -7,9 +7,9 @@ client_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 server_address = ('127.0.0.1', 12345)
 
 MSG_VOTE = 1
-client_id = 1
-sequence = 1
-vote_value = 1
+client_id = int(input("Enter client ID: "))
+sequence = int(input("Enter sequence number: "))
+vote_value = int(input("Enter vote (1 or 2): "))
 
 def checksum(data):
     return sum(data) % 256
